@@ -11,7 +11,9 @@ var chosenWord = randomWord[Math.floor(Math.random() * randomWord.length)];
 
 // game displays underlines corresponding to total number of letters of chosen word
 var totalLetters = []
-for (var i=0; )
+for (var i = 0; i < chosenWord.length; i++) {
+    totalLetters[i] = 
+}
 
 // player inputs random letter
 document.onkeyup = function(){
