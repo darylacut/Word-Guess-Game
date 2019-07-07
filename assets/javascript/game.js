@@ -1,16 +1,22 @@
+// variables for displaying to html
+var chosenWord = document.getElementById("chosenWord-text");
+var score = document.getElementById("score-text");
+var tries = document.getElementById("tries-text");
+
+
 // game starts 
 
 // variables declared
 // score = 0
 // game chooses random word from array of words
 
-var randomWord = ["life", "strange", "choices"]
-var score = 0
+var randomWord = ["life", "strange", "choices"];
+var score = 0;
     
 var chosenWord = randomWord[Math.floor(Math.random() * randomWord.length)];
 
 // game displays underlines corresponding to total number of letters of chosen word
-var totalLetters = []
+var totalLetters = [];
 for (var i = 0; i < chosenWord.length; i++) {
     totalLetters[i] = 
 }
