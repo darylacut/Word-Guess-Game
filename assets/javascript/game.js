@@ -2,7 +2,7 @@
 var chosenWord = document.getElementById("chosenWord-text");
 var tries = document.getElementById("tries-text");
 var score = document.getElementById("score-text");
-var totalLetters = document.getElementById("totalLetters-text");
+var wordLetters = document.getElementById("wordLetters-text");
 
 alert("Welcome to the word guessing game!");
 
@@ -20,18 +20,23 @@ var score = 0;
 var chosenWord = randomWord[Math.floor(Math.random() * randomWord.length)];
 
 // game displays underlines corresponding to total number of letters of chosen word
-var totalLetters = [];
+var wordLetters = [];
 for (var i = 0; i < chosenWord.length; i++) {
-    console.log(totalLetters[i] = "_");
+    console.log(wordLetters[i] = "_");
 }
  // to determine how many more blank letters left
 var blankLetters = chosenWord.length;
 
 // player inputs random letter
-document.onkeyup = function(event){
+document.onkeyup = function(event) {
     var letterInput = event.key;
-    alert("you typed " + letterInput);
-}
+
+    for (var l = 0; l < chosenWord.Length; l++) {
+        if (chosenWord[l] === letterInput) {
+
+        }
+    }
+
 
 // if letter has been typed before
     
