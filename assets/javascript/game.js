@@ -22,10 +22,10 @@ var chosenWord = randomWord[Math.floor(Math.random() * randomWord.length)];
 // game displays underlines corresponding to total number of letters of chosen word
 var totalLetters = [];
 for (var i = 0; i < chosenWord.length; i++) {
-    totalLetters[i] = "_";
+    console.log(totalLetters[i] = "_");
 }
-
-var tries = chosenWord.length;
+ // to determine how many more blank letters left
+var blankLetters = chosenWord.length;
 
 // player inputs random letter
 document.onkeyup = function(event){
