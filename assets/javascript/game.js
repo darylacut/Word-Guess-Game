@@ -1,9 +1,22 @@
 // game starts 
-    // score = 0
-    // game chooses random word from array of words
-    // game displays underlines corresponding to total number of letters of chosen word
+
+// variables declared
+// score = 0
+// game chooses random word from array of words
+
+var randomWord = ["life", "strange", "choices"]
+var score = 0
+    
+var chosenWord = randomWord[Math.floor(Math.random() * randomWord.length)];
+
+// game displays underlines corresponding to total number of letters of chosen word
+var totalLetters = []
+for (var i=0; )
 
 // player inputs random letter
+document.onkeyup = function(){
+
+}
 
 // if letter is typed before
     // guesses remain unchanged
@@ -29,6 +42,3 @@
 
 
             // loop until no more words in computer reserve. 
-
-var words = ["life", "strange", "choices"]
-var totalLetters = [""]
