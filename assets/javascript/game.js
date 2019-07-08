@@ -23,6 +23,8 @@ var letterInput = " ";
 
 // game displays underlines corresponding to total number of letters of chosen word
 
+triesText.textContent = event.key;
+
 // html referencing 
 var wordLettersText = document.getElementById("wordLetters-text");
 var triesText = document.getElementById("tries-text");
@@ -32,9 +34,8 @@ for (var i = 0; i < chosenWord.length; i++) {
     console.log(wordLetters[i] = "_");
 }
 
-
 // player inputs random letter
-document.onkeyup = function (event) {
+document.onkeypress = function(event) {
     var letterInput = event.key;
 
 // if letter is valid
