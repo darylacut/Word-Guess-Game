@@ -10,30 +10,31 @@ alert("Welcome to the word guessing game!");
 // score = 0
 // tries = 10
 // game chooses random word from array of words
+
+var wordRepo = ["life", "strange", "choices"];
+var chosenWord = wordRepo[Math.floor(Math.random() * wordRepo.length)];
+var wordLetters = chosenWord.length; 
+var shown = [wordLetters];
+var blankLetters = shown;
 var tries = 10;
 var score = 0;
+var output = " ";
+var letterInput = " ";
 
-
-
-// variables for displaying to html
-var chosenWord = document.getElementById("chosenWord-text");
-var tries = document.getElementById("tries-text");
-var score = document.getElementById("score-text");
-var wordLetters = document.getElementById("wordLetters-text");
-
-var randomWord = ["life", "strange", "choices"];
-var chosenWord = randomWord[Math.floor(Math.random() * randomWord.length)];
- 
 // game displays underlines corresponding to total number of letters of chosen word
-var wordLetters = [];
+
+// html referencing 
+var wordLettersText = document.getElementById("wordLetters-text");
+var triesText = document.getElementById("tries-text");
+var scoreText = document.getElementById("score-text");
+
 for (var i = 0; i < chosenWord.length; i++) {
     console.log(wordLetters[i] = "_");
 }
- // determine how many more blank letters left
-var blankLetters = chosenWord.length;
+
 
 // player inputs random letter
-document.onkeyup = function () {
+document.onkeyup = function (event) {
     var letterInput = event.key;
 
 // if letter is valid
@@ -44,6 +45,7 @@ document.onkeyup = function () {
 
     for (var l = 0; l < chosenWord.Length; l++) {
         if (chosenWord[l] === letterInput) {
+
            console.log (wordLetters[l] = letterInput);
            tries--;
            blankLetters--;
